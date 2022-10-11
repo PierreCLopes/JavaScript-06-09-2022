@@ -54,13 +54,30 @@
         <script src="app/domain/negociacao/Negociacao.js"></script>
 
         <script>
-            var n1 = new Negociacao(new Date(), 10, 3);
-            var volume = n1.volume();
+            var outroDia = new Date();
+            outroDia.setDate(22);
+
+            var n1 = new Negociacao(outroDia, 10, 3);
+
+            outroDia.setDate(30);
+
+            var volume = n1.volume;
+
+            n1.quantidade = 30;
+            console.log(n1.quantidade);
+
+
+
+            n1.data.setDate(outroDia);
+
+            n1._quantidade = 50
+            console.log(n1._quantidade);
+
             console.log(n1);
             console.log(volume);
-            console.log(n1.data());
-            console.log(n1.quantidade());
-            console.log(n1.valor());
+            console.log(n1.data);
+            console.log(n1.quantidade);
+            console.log(n1.valor);
         </script>
     </body>
 </html>
