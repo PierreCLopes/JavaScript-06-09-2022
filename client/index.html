@@ -54,14 +54,14 @@
         <script src="app/domain/negociacao/Negociacao.js"></script>
 
         <script>
-            var outroDia = new Date();
+            let outroDia = new Date();
             outroDia.setDate(22);
 
-            var n1 = new Negociacao(outroDia, 10, 3);
+            let n1 = new Negociacao(outroDia, 10, 3);
 
             outroDia.setDate(30);
 
-            var volume = n1.volume;
+            let volume = n1.volume;
 
             n1.quantidade = 30;
             console.log(n1.quantidade);
@@ -79,16 +79,6 @@
             console.log(n1.quantidade);
             console.log(n1.valor);
 
-            var origem1 = {nome: 'Pierre'};
-            var origem2 = {sobrenome: 'Lopes'};
-
-            var copia = Object.assign({}, origem1, origem2);
-
-            console.log(copia);
-
-            var nome = 'Pierre';
-            var objeto = {nome: nome};
-            console.log(objeto);
         </script>
     </body>
 </html>
